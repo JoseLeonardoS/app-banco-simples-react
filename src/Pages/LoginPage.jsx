@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import api from "../Data/api"
 import { jwtDecode } from "jwt-decode"
+import { Link } from "react-router-dom"
 
 function LoginPage() {
 
@@ -14,7 +15,7 @@ function LoginPage() {
       const decoded = jwtDecode(token)
 
       if (decoded.email) {
-        window.location.href = '/dashboard'
+        window.location.href = '/app-banco-simples-react/#/dashboard'
       }
     }
     catch (error) {
@@ -61,7 +62,7 @@ function LoginPage() {
       <button className="btn btn-dark" type="submit">Login</button>
 
       <p>
-        Ou <a href="/cadastro">Cadastre-se</a>
+        Ou <Link to="/cadastro">Cadastre-se</Link>
       </p>
     </form>
   )
