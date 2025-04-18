@@ -38,7 +38,7 @@ function RegisterPage() {
       alert(res.data.message)
 
       if (res.data.status == true) {
-        window.location.href = '/login'
+        window.location.href = '/app-banco-simples-react/#/login'
       }
 
     } catch (error) {
